@@ -23,8 +23,8 @@ export function Footer() {
               <span className="text-xl font-bold">Alleloquent Farms</span>
             </div>
             <p className="text-sm text-slate-400 leading-relaxed">
-              Premium fresh raw seafood delivered straight to your door. We
-              source only the finest quality seafood from trusted suppliers
+              Premium fresh raw food delivered straight to your door. We
+              source only the finest quality fresh produce, poultry, and staples from trusted farms
               across Nigeria and Africa.
             </p>
           </div>
@@ -35,26 +35,26 @@ export function Footer() {
             <ul className="flex flex-col gap-2 text-sm text-slate-400">
               <li>
                 <Link
-                  href="/products?category=fish"
+                  href="/products?category=produce"
                   className="hover:text-orange-500 transition-colors"
                 >
-                  Fresh Fish
+                  Fresh Produce
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/products?category=shellfish"
+                  href="/products?category=poultry"
                   className="hover:text-orange-500 transition-colors"
                 >
-                  Shellfish
+                  Poultry & Protein
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/products?category=premium"
+                  href="/products?category=staples"
                   className="hover:text-orange-500 transition-colors"
                 >
-                  Premium Selection
+                  Staples & Provisions
                 </Link>
               </li>
               <li>
@@ -74,18 +74,10 @@ export function Footer() {
             <ul className="flex flex-col gap-2 text-sm text-slate-400">
               <li>
                 <Link
-                  href="/recipes"
+                  href="/about"
                   className="hover:text-orange-500 transition-colors"
                 >
-                  Recipes
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/cooking-guides"
-                  className="hover:text-orange-500 transition-colors"
-                >
-                  Cooking Guides
+                  Our Story
                 </Link>
               </li>
               <li>
@@ -102,6 +94,14 @@ export function Footer() {
                   className="hover:text-orange-500 transition-colors"
                 >
                   Sustainability
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/faq"
+                  className="hover:text-orange-500 transition-colors"
+                >
+                  FAQs
                 </Link>
               </li>
             </ul>

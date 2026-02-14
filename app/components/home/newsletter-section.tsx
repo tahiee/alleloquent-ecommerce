@@ -55,16 +55,16 @@ export function NewsletterSection() {
             </div>
 
             <h2 className="mb-4 text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight">
-              STAY UPDATED WITH
+              JOIN THE FRESH
               <br />
-              <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
-                EXCLUSIVE OFFERS
+              <span className="bg-gradient-to-r from-orange-400 via-yellow-400 to-orange-600 bg-clip-text text-transparent">
+                FOOD FAMILY! 🎉
               </span>
             </h2>
 
             <p className="mb-10 text-lg md:text-xl text-blue-100 leading-relaxed">
-              Subscribe to our newsletter for exclusive offers, delicious recipes,
-              seasonal seafood updates, and expert cooking tips delivered to your inbox
+              Subscribe now and get exclusive discounts, early access to new products,
+              special promo codes, and fresh food tips straight to your inbox! 📧✨
             </p>
           </div>
 
@@ -113,25 +113,25 @@ export function NewsletterSection() {
 
           {/* Benefits */}
           <div className="mt-12 grid sm:grid-cols-3 gap-6 text-center">
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all">
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all hover:scale-105 duration-300">
               <div className="text-3xl mb-2">🎁</div>
-              <p className="text-white font-semibold mb-1">Exclusive Deals</p>
-              <p className="text-blue-200 text-sm">Member-only discounts</p>
+              <p className="text-white font-semibold mb-1">20% OFF Welcome!</p>
+              <p className="text-blue-200 text-sm">First order discount</p>
             </div>
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all">
-              <div className="text-3xl mb-2">📖</div>
-              <p className="text-white font-semibold mb-1">Free Recipes</p>
-              <p className="text-blue-200 text-sm">Expert cooking guides</p>
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all hover:scale-105 duration-300">
+              <div className="text-3xl mb-2">⚡</div>
+              <p className="text-white font-semibold mb-1">Flash Sales Alert</p>
+              <p className="text-blue-200 text-sm">Weekly special deals</p>
             </div>
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all">
-              <div className="text-3xl mb-2">🐟</div>
-              <p className="text-white font-semibold mb-1">Early Access</p>
-              <p className="text-blue-200 text-sm">New seafood arrivals</p>
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all hover:scale-105 duration-300">
+              <div className="text-3xl mb-2">🌾</div>
+              <p className="text-white font-semibold mb-1">VIP Access</p>
+              <p className="text-blue-200 text-sm">Be first to know!</p>
             </div>
           </div>
 
           <p className="text-center text-blue-300 text-sm mt-6">
-            Join 10,000+ seafood lovers. Unsubscribe anytime.
+            Join 10,000+ fresh food lovers. Unsubscribe anytime.
           </p>
         </div>
       </div>

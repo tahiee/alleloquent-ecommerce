@@ -3,11 +3,11 @@ import { CheckCircle2 } from "lucide-react";
 
 export function WhySection() {
   const features = [
-    "Sourced from trusted suppliers",
+    "Sourced from trusted farms",
     "24-hour freshness guarantee",
-    "Restaurant-quality seafood",
+    "Farm-fresh quality food",
     "Carefully packaged & shipped",
-    "Sustainable fishing practices",
+    "Sustainable farming practices",
     "Expert quality selection",
   ];
 
@@ -27,23 +27,21 @@ export function WhySection() {
             </div>
 
             <h2 className="mb-6 text-4xl md:text-5xl font-extrabold text-slate-900 leading-tight">
-              WHY ALLELOQUENT
+              WHY CHOOSE
               <br />
-              <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">
-                FARMS?
+              <span className="bg-gradient-to-r from-orange-500 via-yellow-500 to-orange-600 bg-clip-text text-transparent">
+                ALLELOQUENT? 🌟
               </span>
             </h2>
 
             <p className="mb-6 text-lg text-slate-600 leading-relaxed">
-              At Alleloquent Farms, we believe that the quality of your seafood
-              matters. Thats why we source only the freshest, highest-quality
-              seafood from trusted suppliers and deliver it straight to your
-              door.
+              We are not just another food delivery service - we are your trusted farm partner!
+              Every morning, we handpick the freshest plantain, eggs, rice, and poultry
+              from local farms you can trust. No middlemen, no delays, just pure freshness! 🌾
             </p>
 
             <p className="mb-8 text-lg text-slate-600 leading-relaxed">
-              Our commitment to freshness means you can enjoy restaurant-quality
-              seafood in the comfort of your own home.
+              From farm to your kitchen in 24 hours. That is our promise to you and your family! 👨‍👩‍👧‍👦✨
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -61,9 +59,11 @@ export function WhySection() {
           <div className="order-1 md:order-2 relative">
             <div className="relative h-[500px] rounded-3xl overflow-hidden shadow-2xl">
               <Image
-                src="https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?w=800&q=80"
-                alt="Fresh seafood packaging"
+                src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=1200&q=90"
+                alt="Fresh food packaging"
                 fill
+                quality={95}
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover hover:scale-105 transition-transform duration-700"
               />
 

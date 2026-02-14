@@ -9,17 +9,17 @@ export function TestimonialSection() {
   const testimonials = [
     {
       quote:
-        "The quality of seafood from Alleloquent Farms is unmatched. Every order arrives fresh, perfectly packaged, and tastes incredible. It's completely changed the way I cook at home!",
-      author: "Sarah Mitchell",
-      role: "Home Chef, Lagos",
+        "Chai! This Alleloquent Farms sef! Their plantain sweet die! My family can't stop asking for more. The eggs are fresh, rice quality is top-notch. I don't stress going to market anymore! 🙌",
+      author: "Mama Chioma",
+      role: "Busy Mom of 3, Lagos",
       image:
         "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80",
       rating: 5,
     },
     {
       quote:
-        "I've tried many seafood suppliers, but none compare to the freshness and quality here. The delivery is always on time, and the packaging keeps everything perfectly chilled.",
-      author: "David Okonkwo",
+        "As a restaurant owner, I need reliable suppliers. These guys deliver on time, EVERY TIME! Their chicken is fresh, healthy, and my customers love it. Best decision I made for my business! 💯",
+      author: "Alhaji Musa Ibrahim",
       role: "Restaurant Owner, Abuja",
       image:
         "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80",
@@ -27,9 +27,9 @@ export function TestimonialSection() {
     },
     {
       quote:
-        "As a professional chef, I demand the best ingredients. Alleloquent Farms delivers restaurant-quality seafood that my customers rave about. Highly recommended!",
-      author: "Chef Amara Nwankwo",
-      role: "Executive Chef, Port Harcourt",
+        "I've been ordering from them for 6 months now. Quality never disappoints! Fresh eggs, sweet plantain, premium rice - everything is always on point. Plus their customer service is amazing! ⭐",
+      author: "Ada Nkem",
+      role: "Food Blogger, Port Harcourt",
       image:
         "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80",
       rating: 5,
@@ -103,6 +103,8 @@ export function TestimonialSection() {
                   src={current.image}
                   alt={current.author}
                   fill
+                  quality={95}
+                  sizes="80px"
                   className="object-cover"
                 />
               </div>

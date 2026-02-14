@@ -1,8 +1,7 @@
 import {
-  Fish,
   Leaf,
   Award,
-  Waves,
+  Sparkles,
   ThermometerSnowflake,
   Shield,
 } from "lucide-react";
@@ -10,31 +9,31 @@ import {
 export function MarketFeaturesSection() {
   const features = [
     {
-      icon: Fish,
-      title: "SUSTAINABLY SOURCED",
+      icon: Sparkles,
+      title: "FARM DIRECT 🌾",
       description:
-        "We partner with fisheries that follow sustainable practices to protect our oceans for future generations.",
+        "We work directly with trusted Nigerian farmers - no middlemen! This means fresher food and better prices for you. Win-win!",
       color: "from-blue-500 to-blue-600",
     },
     {
       icon: Leaf,
-      title: "WILD CAUGHT",
+      title: "100% NATURAL 🌿",
       description:
-        "Our seafood is wild-caught from pristine waters, ensuring the best flavor and nutritional value.",
+        "No chemicals, no preservatives! Just pure, natural goodness the way Mama Nature intended. Your family deserves the best!",
       color: "from-green-500 to-green-600",
     },
     {
       icon: Award,
-      title: "QUALITY TESTED",
+      title: "QUALITY CHECKED ✅",
       description:
-        "Every product undergoes rigorous quality testing to meet our high standards before reaching you.",
+        "Every single item is hand-inspected by our quality team. If it's not good enough for our family, it's not good enough for yours!",
       color: "from-orange-500 to-orange-600",
     },
   ];
 
   const badges = [
-    { icon: Waves, label: "Ocean-Fresh", value: "Daily" },
-    { icon: ThermometerSnowflake, label: "Temperature", value: "-2°C" },
+    { icon: Sparkles, label: "Farm-Fresh", value: "Daily" },
+    { icon: ThermometerSnowflake, label: "Freshness", value: "24hrs" },
     { icon: Shield, label: "Certified", value: "100%" },
   ];
 
@@ -59,14 +58,14 @@ export function MarketFeaturesSection() {
             </span>
           </div>
           <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
-            Why Choose{" "}
-            <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
-              Our Seafood
+            What Makes Us{" "}
+            <span className="bg-gradient-to-r from-orange-400 via-yellow-400 to-orange-600 bg-clip-text text-transparent">
+              Different? 💪
             </span>
           </h2>
           <p className="text-xl text-slate-400 max-w-2xl mx-auto">
-            Were committed to delivering the highest quality seafood with
-            sustainable practices
+            We are not just selling food - we are bringing farm freshness to your doorstep
+            with love, care, and a commitment to quality! 🎯
           </p>
         </div>
 

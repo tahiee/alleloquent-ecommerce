@@ -15,10 +15,14 @@ import {
 import { useState, useEffect } from "react";
 import { MobileNav } from "./mobile-nav";
 import { useCart } from "@/app/lib/hooks/use-cart";
+import { useFavorites } from "@/app/lib/hooks/use-favorites";
+import { SearchBar } from "./search-bar";
 
 export function Header() {
   const { cart } = useCart();
+  const { favorites } = useFavorites();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const itemCount = cart.items.reduce((sum, item) => sum + item.quantity, 0);
 
@@ -28,6 +32,18 @@ export function Header() {
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Keyboard shortcut for search (Ctrl+K or Cmd+K)
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.ctrlKey || e.metaKey) && e.key === "k") {
+        e.preventDefault();
+        setSearchOpen(true);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
 
   return (
@@ -40,7 +56,7 @@ export function Header() {
     >
       {/* Top Bar - Announcement */}
       <div className="bg-gradient-to-r from-orange-500 via-orange-600 to-orange-500 text-white py-2 text-center text-sm font-medium">
-        🎉 Free Shipping on orders over $50 | Fresh Daily Catches Available
+        🎉 Free Shipping on orders over ₦20,000 | Fresh Farm Produce Daily
       </div>
 
       <div className="container mx-auto max-w-7xl px-4">
@@ -63,7 +79,7 @@ export function Header() {
                 Alleloquent Farms
               </span>
               <span className="block text-xs text-slate-600 font-medium">
-                Premium Raw Seafood
+                Premium Fresh Raw Food
               </span>
             </div>
           </Link>
@@ -93,34 +109,26 @@ export function Header() {
                     All Products
                   </Link>
                   <Link
-                    href="/products?category=fish"
+                    href="/products?category=produce"
                     className="block px-4 py-3 text-sm text-slate-700 hover:bg-orange-50 hover:text-orange-600 rounded-lg transition-colors"
                   >
-                    Fresh Fish
+                    Fresh Produce
                   </Link>
                   <Link
-                    href="/products?category=shellfish"
+                    href="/products?category=poultry"
                     className="block px-4 py-3 text-sm text-slate-700 hover:bg-orange-50 hover:text-orange-600 rounded-lg transition-colors"
                   >
-                    Shellfish
+                    Poultry & Protein
                   </Link>
                   <Link
-                    href="/products?category=premium"
+                    href="/products?category=staples"
                     className="block px-4 py-3 text-sm text-slate-700 hover:bg-orange-50 hover:text-orange-600 rounded-lg transition-colors"
                   >
-                    Premium Selection
+                    Staples & Provisions
                   </Link>
                 </div>
               </div>
             </div>
-
-            <Link
-              href="/recipes"
-              className="group relative text-sm font-semibold text-slate-700 hover:text-orange-600 transition-colors py-2"
-            >
-              Recipes
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-500 group-hover:w-full transition-all duration-300" />
-            </Link>
 
             <Link
               href="/about"
@@ -144,19 +152,26 @@ export function Header() {
             <Button
               variant="ghost"
               size="icon"
+              onClick={() => setSearchOpen(true)}
               className="relative rounded-full hover:bg-orange-50 hover:text-orange-600 transition-all"
             >
               <Search className="h-5 w-5" />
             </Button>
 
-            <Button
-              variant="ghost"
-              size="icon"
-              className="relative rounded-full hover:bg-orange-50 hover:text-orange-600 transition-all"
-            >
-              <Heart className="h-5 w-5" />
-              <span className="absolute top-1 right-1 h-2 w-2 bg-orange-500 rounded-full" />
-            </Button>
+            <Link href="/favorites">
+              <Button
+                variant="ghost"
+                size="icon"
+                className="relative rounded-full hover:bg-orange-50 hover:text-orange-600 transition-all"
+              >
+                <Heart className="h-5 w-5" />
+                {favorites.length > 0 && (
+                  <span className="absolute -right-1 -top-1 flex h-5 w-5 items-center justify-center rounded-full bg-red-500 text-[10px] font-bold text-white ring-2 ring-white">
+                    {favorites.length}
+                  </span>
+                )}
+              </Button>
+            </Link>
 
             <Button
               variant="ghost"
@@ -215,6 +230,9 @@ export function Header() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && <MobileNav onClose={() => setMobileMenuOpen(false)} />}
+
+      {/* Search Bar */}
+      <SearchBar isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
     </header>
   );
 }

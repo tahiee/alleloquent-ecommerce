@@ -1,7 +1,9 @@
-Our PRODUCT IS FRESH RAW FOOD STUFF
+Our PRODUCT IS FRESH RAW FOOD STUFF (NOT SEAFOOD)
 SOLELY FOR NIGERIA AND AFRICA MARKET
 
-An E Commerce fresh raw food website where people. An order from and have it delivered to them
+An E-Commerce fresh raw food website where people can order from and have it delivered to them
+
+NOTE: This is a fresh raw food marketplace - NO RECIPES SECTION needed, only product sales
 
 Homepage
 (what you sell + why it’s better)
@@ -29,7 +31,7 @@ Cart & Checkout
 - Multiple payment methods (card, pay stack)
 
 2. Trust & Credibility Pages
-About Us
+   About Us
 
 - Our story or brand mission
 
@@ -43,3 +45,12 @@ About Us
 - Simple language
 - Clear timelines and conditions
   🔐 Privacy Policy & Terms
+
+Products
+Bunch of unripe plantain goes for 7,000 naira
+Bunch of ripped plantain goes for 11,000 naira
+Crate of eggs goes for 7,000 naira
+A liter of palm oil goes for 1,500 naira
+5kg of Garri goes for 2,500
+Rice 5kg cost 4,500 naira
+Live chicken 15,000 naira

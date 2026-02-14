@@ -17,7 +17,7 @@ interface CartContextType {
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
-const CART_STORAGE_KEY = "seafood_ecommerce_cart";
+const CART_STORAGE_KEY = "freshfood_ecommerce_cart";
 const SHIPPING_COST = 2000; // ₦2000 shipping fee
 
 export function CartProvider({ children }: { children: React.ReactNode }) {

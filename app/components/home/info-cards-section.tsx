@@ -5,20 +5,20 @@ export function InfoCardsSection() {
   const cards = [
     {
       icon: Truck,
-      title: "FREE SHIPPING",
-      description: "On orders over $50",
+      title: "FREE DELIVERY 🚚",
+      description: "Orders over ₦20,000 - We got you!",
       gradient: "from-blue-500 to-blue-600"
     },
     {
       icon: Shield,
-      title: "QUALITY GUARANTEE",
-      description: "100% fresh seafood",
+      title: "100% FRESH GUARANTEE ✅",
+      description: "Not fresh? Full refund, no wahala!",
       gradient: "from-orange-500 to-orange-600"
     },
     {
       icon: Clock,
-      title: "FAST DELIVERY",
-      description: "Same day delivery available",
+      title: "24-HOUR DELIVERY ⚡",
+      description: "Order today, enjoy tomorrow!",
       gradient: "from-green-500 to-green-600"
     }
   ];

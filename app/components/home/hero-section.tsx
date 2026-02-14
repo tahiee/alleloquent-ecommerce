@@ -1,27 +1,29 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
+// import Link from "next/link";
+// import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
 
 export function HeroSection() {
   return (
-    <section className="relative h-[90vh] min-h-[600px] w-full overflow-hidden">
+    <section className="relative h-[90vh] min-h-150 w-full overflow-hidden">
       {/* Background Image with Parallax Effect */}
       <div className="absolute inset-0">
         <Image
           src="/homeimg.png"
-          alt="Seafood dishes"
+          alt="Fresh raw food"
           fill
-          className="object-cover brightness-75 scale-105 animate-in zoom-in duration-1000"
+          quality={100}
           priority
+          sizes="100vw"
+          className="object-cover brightness-110 scale-105 animate-in zoom-in duration-1000"
         />
       </div>
 
       {/* Gradient Overlays */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
-      <div className="absolute inset-0 bg-gradient-to-r from-orange-900/20 to-transparent" />
+      <div className="absolute inset-0 bg-linear-to-b from-black/60 via-black/40 to-black/60" />
+      <div className="absolute inset-0 bg-linear-to-r from-orange-900/20 to-transparent" />
 
       {/* Content */}
       <div className="relative z-10 flex h-full items-center justify-center">
@@ -29,23 +31,24 @@ export function HeroSection() {
           <div className="animate-in fade-in slide-in-from-bottom-4 duration-1000">
             <div className="mb-6 inline-block">
               <span className="inline-block px-4 py-2 bg-orange-500/20 backdrop-blur-sm border border-orange-500/30 rounded-full text-orange-300 text-sm font-semibold tracking-wider">
-                PREMIUM SEAFOOD SELECTION
+                FRESH RAW FOOD MARKETPLACE
               </span>
             </div>
 
-            <h1 className="mb-6 text-5xl font-extrabold tracking-tight text-white md:text-7xl lg:text-8xl">
-              IGNITE YOUR SENSES
-              <span className="block mt-2 bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-transparent">
-                JOURNEY
+            <h1 className="mb-6 text-5xl font-extrabold tracking-tight text-white md:text-7xl lg:text-8xl animate-in fade-in slide-in-from-bottom duration-700">
+              NAIJA&apos;S FRESHEST
+              <span className="block mt-2 bg-linear-to-r from-orange-400 via-yellow-400 to-orange-600 bg-clip-text text-transparent">
+                FARM MARKET! 🌾
               </span>
             </h1>
 
-            <p className="mx-auto mb-10 max-w-2xl text-lg text-gray-200 md:text-xl lg:text-2xl font-light leading-relaxed">
-              Experience the finest fresh seafood delivered to your doorstep.
-              Premium quality, unmatched freshness.
+            <p className="mx-auto mb-10 max-w-2xl text-lg text-gray-200 md:text-xl lg:text-2xl font-light leading-relaxed animate-in fade-in slide-in-from-bottom duration-1000 delay-200">
+              Skip the market wahala! Get premium plantain, eggs, rice, chicken
+              & more delivered fresh to your door. From farm to table in 24
+              hours! 🚚✨
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            {/* <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link href="/products">
                 <Button
                   size="lg"
@@ -60,12 +63,12 @@ export function HeroSection() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="px-10 py-7 text-lg font-bold rounded-full border-2 border-white text-white hover:bg-white hover:text-slate-900 transition-all duration-300 hover:scale-105"
+                  className="px-10 py-7 text-lg font-bold rounded-full border-2 border-white text-white hover:bg-white hover:text-slate-900 transition-all duration-300 hover:scale-105 bg-black"
                 >
                   LEARN MORE
                 </Button>
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
