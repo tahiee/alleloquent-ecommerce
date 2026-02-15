@@ -35,13 +35,19 @@ loadEnvLocal();
 
 if (!getApps().length) {
   if (!process.env.FIREBASE_ADMIN_PROJECT_ID) {
-    throw new Error("Missing FIREBASE_ADMIN_PROJECT_ID. Check .env.local values.");
+    throw new Error(
+      "Missing FIREBASE_ADMIN_PROJECT_ID. Check .env.local values."
+    );
   }
   if (!process.env.FIREBASE_ADMIN_CLIENT_EMAIL) {
-    throw new Error("Missing FIREBASE_ADMIN_CLIENT_EMAIL. Check .env.local values.");
+    throw new Error(
+      "Missing FIREBASE_ADMIN_CLIENT_EMAIL. Check .env.local values."
+    );
   }
   if (!process.env.FIREBASE_ADMIN_PRIVATE_KEY) {
-    throw new Error("Missing FIREBASE_ADMIN_PRIVATE_KEY. Check .env.local values.");
+    throw new Error(
+      "Missing FIREBASE_ADMIN_PRIVATE_KEY. Check .env.local values."
+    );
   }
 
   initializeApp({
@@ -65,14 +71,19 @@ async function setAdminClaim(email: string) {
     const user = await auth.getUserByEmail(email);
     await auth.setCustomUserClaims(user.uid, { admin: true });
     console.log(`Admin claim set for ${email} (UID: ${user.uid})`);
-    console.log("User needs to sign out and sign back in for changes to take effect.");
+    console.log(
+      "User needs to sign out and sign back in for changes to take effect."
+    );
   } catch (error: unknown) {
     const authError = error as FirebaseAuthError;
     if (authError.code === "auth/user-not-found") {
       console.error(`User not found: ${email}`);
       console.log("Please create this user in Firebase Console first.");
     } else {
-      console.error("Error setting admin claim:", authError.message ?? "Unknown error");
+      console.error(
+        "Error setting admin claim:",
+        authError.message ?? "Unknown error"
+      );
     }
     throw error;
   }
